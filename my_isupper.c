@@ -1,14 +1,14 @@
 #include <unistd.h>
 #include <stdio.h>
 
-// return true if c is lowercase letter.
-int my_islower(char c)
+// return true if c is uppercase letter.
+int my_isupper(char c)
 {
   // convert c to ascii.
   int code = (int)c;
 
-  // return true if ascii int is code for a lowercase letter.
-  if (97 <= code && code <= 122)
+  // return true if ascii int is code for a uppercase letter.
+  if (65 <= code && code <= 90)
   {
     return 1;
   }
@@ -17,15 +17,15 @@ int my_islower(char c)
 
 int main()
 {
-  int lowerCase = my_islower('a');
+  int lowerCase = my_isupper('a');
   printf(lowerCase == 0 ? "Returns false with 'a'.\n" : "Returns true with 'a'.\n");
 
-  int upperCase = my_islower('Z');
+  int upperCase = my_isupper('Z');
   printf(upperCase == 0 ? "Returns false with 'Z'.\n" : "Returns true with 'Z'.\n");
 
-  int num = my_islower('7');
+  int num = my_isupper('7');
   printf(num == 0 ? "Returns false with '7'.\n" : "Returns true with '7'.\n");
 
-  int otherChar = my_islower('&');
+  int otherChar = my_isupper('&');
   printf(otherChar == 0 ? "Returns false with &.\n" : "Returns true with &.\n");
 }
