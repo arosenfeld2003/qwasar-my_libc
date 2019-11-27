@@ -17,7 +17,7 @@ int my_isalnum(char c)
 
 int main()
 {
-  int numCode = my_isalnum(5);
+  int numCode = my_isalnum('5');
   printf(numCode == 0 ? "Returns false with number.\n" : "Returns true with number.\n");
 
   int lowerCase = my_isalnum('a');

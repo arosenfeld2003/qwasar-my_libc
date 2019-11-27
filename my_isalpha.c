@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // return true if c is a letter or a number.
-int my_isalnum(char c)
+int my_isalpha(char c)
 {
   // convert c to ascii.
   int code = (int)c;
@@ -17,12 +17,12 @@ int my_isalnum(char c)
 
 int main()
 {
-  int lowerCase = my_isalnum('a');
+  int lowerCase = my_isalpha('a');
   printf(lowerCase == 0 ? "Returns false with lowercase letter.\n" : "Returns true with lowercase letter.\n");
 
-  int upperCase = my_isalnum('Z');
+  int upperCase = my_isalpha('Z');
   printf(upperCase == 0 ? "Returns false with uppercase letter.\n" : "Returns true with lowercase letter.\n");
 
-  int otherChar = my_isalnum('&');
+  int otherChar = my_isalpha('&');
   printf(otherChar == 0 ? "Returns false with &.\n" : "Returns true with lowercase letter.\n");
 }
