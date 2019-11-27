@@ -31,5 +31,5 @@ int main()
 
   char num = '4';
   int isNum = my_iscntrl(num);
-  printf(isNum == 0 ? "Returns false with 4.\n" : "Returns true with 4.\n");
+  printf(isNum == 0 ? "Returns false with '4'.\n" : "Returns true with 4.\n");
 }

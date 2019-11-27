@@ -8,7 +8,7 @@ int my_isalnum(char c)
   int code = (int)c;
 
   // return true if c is a number or converted ascii int is code for a letter.
-  if ((0 <= c && c <= 9) || (65 <= code && code <= 122))
+  if ((48 <= code && code <= 57) || (65 <= code && code <= 122))
   {
     return 1;
   }
@@ -18,7 +18,7 @@ int my_isalnum(char c)
 int main()
 {
   int numCode = my_isalnum('5');
-  printf(numCode == 0 ? "Returns false with number.\n" : "Returns true with number.\n");
+  printf(numCode == 0 ? "Returns false with '5'.\n" : "Returns true with '5'.\n");
 
   int lowerCase = my_isalnum('a');
   printf(lowerCase == 0 ? "Returns false with lowercase letter.\n" : "Returns true with lowercase letter.\n");
