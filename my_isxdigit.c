@@ -1,9 +1,10 @@
 #include <unistd.h>
 #include <stdio.h>
 
+// returns true if passed a hexadecimal digit (0 to 9, A to F, or a to f)
 int my_isxdigit(char c)
 {
-  if ((0 <= c && c <= 9) || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'))
+  if (('0' <= c && c <= '9') || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'))
   {
     return 1;
   }
@@ -22,5 +23,5 @@ int main()
   printf(num == 0 ? "Returns false with '7'.\n" : "Returns true with '7'.\n");
 
   int otherLetter = my_isxdigit('j');
-  printf(otherLetter == 0 ? "Returns false with &.\n" : "Returns true with &.\n");
+  printf(otherLetter == 0 ? "Returns false with 'j'.\n" : "Returns true with 'j'.\n");
 }

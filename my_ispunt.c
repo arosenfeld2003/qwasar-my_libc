@@ -18,7 +18,7 @@ int main()
 {
   int space = my_ispunct(' ');
   printf(space == 0 ? "Returns false with a space.\n" : "Returns true with a space.\n");
-  
+
   int numCode = my_ispunct('5');
   printf(numCode == 0 ? "Returns false with '5'.\n" : "Returns true with '5'.\n");
 
