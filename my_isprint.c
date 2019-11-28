@@ -7,7 +7,7 @@ int my_isprint(char c)
   // convert c to ascii.
   int code = (int)c;
 
-  // return true if ascii int is code for a letter.
+  // return true if ascii int is code for a printable char.
   if (32 <= code && code <= 127)
   {
     return 1;
@@ -18,10 +18,10 @@ int my_isprint(char c)
 int main()
 {
   int lowerCase = my_isprint('a');
-  printf(lowerCase == 0 ? "Returns false with lowercase letter.\n" : "Returns true with lowercase letter.\n");
+  printf(lowerCase == 0 ? "Returns false with 'a'.\n" : "Returns true with 'a'.\n");
 
   int upperCase = my_isprint('Z');
-  printf(upperCase == 0 ? "Returns false with uppercase letter.\n" : "Returns true with lowercase letter.\n");
+  printf(upperCase == 0 ? "Returns false with 'Z'.\n" : "Returns true with 'Z'.\n");
 
   int num = my_isprint('7');
   printf(num == 0 ? "Returns false with '7'.\n" : "Returns true with '7'.\n");
